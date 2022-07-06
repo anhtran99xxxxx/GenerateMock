@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        button {
+            background-color:#90EE90;
+            border-radius: 10px;
+            width: 100px;
+            height: 30px;
+        }
+        .tool {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin:auto;
+            display:block; 
+        }
+    </style>
+</head>
+<body>
+    <p style="color:red;">paste code here</p>
+    <textarea id="inputValue"  style="tab-size: 4; background-color: wheat; height:500px; width:100%;"></textarea>
+    
+    <div class="tool">
+       <button id="buttonClick" type="button" style="" onclick="generateCode()">Convert</button> 
+       <button id="buttonRefresh" type="button" style="" onclick="refreshData()">Refresh</button>
+       <button id="buttonCopy" type="button" style="" onclick="copyToClipboard()">Copy output</button> 
+    </div>
+    
+
+    <div id="outputValue" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true"
+        style="tab-size: 4; background-color: wheat; height:auto; width:100%;" role="textbox" aria-multiline="true">
+    </div>
+</body>
+</html>
+
