@@ -1,8 +1,8 @@
 const headerStr = "    Package package;<br/>    int value[128] = {0};<br/>    package.timeDelay = DELAY_FRAME_MIN;<br/><br/>"
 const endStr = "    addToQueue(package);<br/>"
-const mainRegex = /.*Content\d+:\s(\d+)[\s:<>-\w]+ControlId:\s(\w+)[\s,\w:]+PageId:\s(\w+),\seventType[\s=]+(\w+)[\s,\w:]+EventId:\s([\w\s]+)[\s,\w:]+value[\]\[\(\)\d\w\s]+=\s([-\d]+).*/g
+const mainRegex = /.*Content.*:\s(\d+)[\s:<>-\w]+ControlId:\s(\w+)[\s,\w:]+PageId:\s(\w+),\seventType[\s=]+(\w+)[\s,\w:]+EventId:\s([\w\s]+)[\s,\w:]+value[\]\[\(\)\d\w\s]+=\s([-\d]+).*/g
 const dataRegex = /value.*/g
-const timeRegex = /Content\d+:\s(\d+)/g
+const timeRegex = /Content.*:\s(\d+)/g
     
 function generateCode() {
     let inputText = document.getElementById("inputValue").value;
