@@ -15,6 +15,8 @@ function generateCode() {
     var isHasData = false
     lines.forEach(line => {
         if (line.includes('getHmiToMeData - ControlId') == true) {
+            //formate input data 
+            line = line.replace("Not found", "NOT_INIT_VALUE");
             let isInvalid = line.search(mainRegex)
             if (isInvalid != -1) {
                 isHasData = true
